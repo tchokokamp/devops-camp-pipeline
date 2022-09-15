@@ -15,6 +15,8 @@ for currentArgument, currentValue in arguments:
     elif currentArgument in ("-r"):
         registry = currentValue
 
+        
+
 ## Grab sha256 digest from Harbor project repository ##
 urlArtifact = 'https://' + registry + '/api/v2.0/projects/' + projectName + '/repositories/' + imageName + '/artifacts/'
 digestResp = requests.get(urlArtifact, auth=(username, password))
